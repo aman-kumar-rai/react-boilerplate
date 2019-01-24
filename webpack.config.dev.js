@@ -15,6 +15,7 @@ module.exports = merge(baseConfig, {
         // enables hot module replacement feature...
         // hot: true,
         // https: true
-    }
+    },
+    devtool: 'source-map'
 });
 
