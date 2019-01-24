@@ -9,12 +9,7 @@ module.exports = merge(baseConfig, {
     devServer: {
         port: 8976,
         open: true,
-        publicPath: '/',
-        // allows access to app using local IP(in LAN)
-        // useLocalIp: true,
-        // enables hot module replacement feature...
-        // hot: true,
-        // https: true
+        publicPath: '/'
     },
     devtool: 'source-map'
 });

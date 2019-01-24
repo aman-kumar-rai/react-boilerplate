@@ -1,4 +1,6 @@
 import React from 'react';
+import {hot} from 'react-hot-loader';
+import './styles.css';
 
 // lets create a counter example to test the class-properties plugin...
 class App extends React.Component{
@@ -9,11 +11,10 @@ class App extends React.Component{
 
 
     render(){
-
         return (
             <React.Fragment>
-                <p>{this.state.value}</p>
-                <button onClick={() => {
+                <p className={this.state.value > 5 ? 'danger': null}>Count: {this.state.value}</p>
+                <button className="btn btn-increment" onClick={() => {
 
                     this.setState((state) => {
                         return {
@@ -23,7 +24,7 @@ class App extends React.Component{
                 }}>
                     +
                 </button>
-                <button onClick={() => {
+                <button className="btn btn-decrement" onClick={() => {
 
                     this.setState((state) => {
                         return {
@@ -34,10 +35,10 @@ class App extends React.Component{
                     -
                 </button>
             </React.Fragment>
-        );
-        
+        );   
     }
-
-
 }
-export default App;
+
+// this first call returns a function, a higher order component to be precise, and we pass our component 'App' as an argument to it...
+const retFunc = hot(module);
+export default retFunc(App);

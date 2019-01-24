@@ -22,9 +22,20 @@ module.exports = {
                         '@babel/preset-react'
                     ],
                     plugins: [
-                        '@babel/plugin-proposal-class-properties'
+                        '@babel/plugin-proposal-class-properties',
+                        'react-hot-loader/babel'
                     ]
                 }
+            }, 
+            {
+                test: /\.css$/,
+                // css-loader: allows webpack to handle/parse css...
+                // style-loader: injects the style into markup...
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ],
+                exclude: /node_modules/
             }
         ]
     },
