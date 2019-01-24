@@ -23,6 +23,7 @@ module.exports = {
                     ],
                     plugins: [
                         '@babel/plugin-proposal-class-properties',
+                        // this plugin is a dependency for react-hot-loader, and it converts hot loader specific code to JS...
                         'react-hot-loader/babel'
                     ]
                 }

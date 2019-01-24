@@ -2,7 +2,6 @@ import React from 'react';
 import {hot} from 'react-hot-loader';
 import './styles.css';
 
-// lets create a counter example to test the class-properties plugin...
 class App extends React.Component{
     
     state = {

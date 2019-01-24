@@ -8,5 +8,11 @@
 </head>
 <body>
     <div id="app"></div>
+
+    <!-- these cdn links will be included for production build only -->
+    <% if(process.env.NODE_ENV === 'production') { %>
+        <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <% } %>
 </body>
 </html>
