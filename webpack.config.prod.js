@@ -14,7 +14,7 @@ module.exports = merge(baseConfig, {
             analyzerMode: 'static',
             // decides whether the report is opened after being generated
             openAnalyzer: false,
-            reportFilename: 'optimize.html'
+            reportFilename: 'size_stats.html'
 
         })
     ],

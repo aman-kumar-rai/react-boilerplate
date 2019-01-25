@@ -18,7 +18,15 @@ module.exports = {
                 exclude: /node_modules/,
                 options: {
                     presets: [
-                        '@babel/preset-env',
+                        ['@babel/preset-env', {
+                            targets: [
+                                "last 2 versions",
+                                "not dead",
+                                "not <2%",
+                                "not ie 11"
+                            ],
+                            useBuiltIns: 'entry'
+                        }],
                         '@babel/preset-react'
                     ],
                     plugins: [
