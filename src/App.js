@@ -1,5 +1,8 @@
 import React from 'react';
 import {hot} from 'react-hot-loader';
+// import Warning from './Warning.js';
+const Warning = React.lazy(() => import('./Warning.js'));
+
 import './styles.css';
 
 class App extends React.Component{
@@ -33,6 +36,14 @@ class App extends React.Component{
                 }}>
                     -
                 </button>
+                {
+                    this.state.value > 5
+                     ? 
+                     <React.Suspense fallback="Loading...">
+                         <Warning />
+                     </React.Suspense>
+                     : null
+                }
             </React.Fragment>
         );   
     }
